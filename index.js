@@ -169,7 +169,7 @@ app.get("/contacto", function (req, res) {
 app.listen(4000);
 console.log("Servidor escuchando en el puerto 4000");
 
-*/
+
 
 
 //-------------------------------------------
@@ -191,23 +191,22 @@ app.get("/contacto", function (req, res) {
 app.listen(4000);
 console.log("Servidor escuchando en el puerto 4000 http://localhost:4000/contacto");
 
-
+*/
 
 //-------------------------------------------
 // VARIABLES DE ENTORNO
 // Llamamos a las librerias
-//let express = require('express'); // Importamos express
-//let app = express(); // Creamos una instancia de express
-//let path = require ('path'); //libreria para rutas a paginas estaticas
-//let dotenv = require('dotenv');
-require('dotenv');
+let express = require('express'); // Importamos express
+let app = express(); // Creamos una instancia de express
+let path = require ('path'); //libreria para rutas a paginas estaticas
+let dotenv = require('dotenv');
+// ó require('dotenv');
 
 app.use(express.static(path.join(__dirname, 'public'))); //convertimos la carpeta public en estática vinculada
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "public", "pages/index.html")); // le damos la rura especifica con el mensaje
 });
-
 app.get("/contacto", function (req, res) {
     res.sendFile(path.join(__dirname, "public", "pages/contacto.html")); // le damos la rura especifica con el mensaje
 });
