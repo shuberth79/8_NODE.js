@@ -196,11 +196,12 @@ console.log("Servidor escuchando en el puerto 4000 http://localhost:4000/contact
 //-------------------------------------------
 // VARIABLES DE ENTORNO
 // Llamamos a las librerias
-let express = require('express'); // Importamos express
-let app = express(); // Creamos una instancia de express
+//et express = require('express'); // Importamos express
+//let app = express(); // Creamos una instancia de express
 let path = require ('path'); //libreria para rutas a paginas estaticas
-let dotenv = require('dotenv');
-// ó require('dotenv');
+//let mysql = require('mysql2');
+//let dotenv = require('dotenv')
+require('dotenv').config({ path: './.env' });
 
 app.use(express.static(path.join(__dirname, 'public'))); //convertimos la carpeta public en estática vinculada
 
